@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+}
+
+p {
+	font-size: 15px;
+	margin: 6px 0;
+}
+
+#container {
+	position: relative;
+
+	height: 100vh;
+	perspective: 1000px;
+
+	background-image: url('assets/seamless_wave_50.gif');
+  background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.country {
+	position: absolute;
+
+	width: 130vw;
+	mix-blend-mode: multiply;
+}
+
+.guy {
+	position: absolute;
+	top: 45.5vh;
+	left: 14vw;
+
+	z-index: 1;
+
+	width: 30vw;
+}
+
+.text-bubble {
+	background-color: white;
+	padding: 18px;
+	border-radius: 24px;
+
+	position: absolute;
+	top: 50vh;
+	left: 44vw;
+
+	z-index: 2;	
+}
+
+.arrow-left {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+
+	border-right: 6vw solid white;
+
+	position: absolute;
+	top: 55vh;
+	left: 42vw;
+}
+
+@media screen and (max-width: 600px) {
+	.text-bubble {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.text-bubble {
+		padding: 16px;
+		font-size: 10px;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.guy {
+		top: 40.5vh;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.guy {
+		top: 36.5vh;
+	}
+}
